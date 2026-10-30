@@ -1,0 +1,232 @@
+[
+  {
+    "id": "6b62a9ce-4d9a-4860-aa66-5d974d880c4b",
+    "filename": "Pasted Resume Content",
+    "extracted_text_preview": "Candidate with skills in Python, SQL, Excel, Pandas, Tableau, Power BI, Statistics.",
+    "total_skills_found": 3,
+    "extracted_skills": [
+      {
+        "name": "Pandas",
+        "category": "Data Analysis & ML"
+      },
+      {
+        "name": "SQL",
+        "category": "Database & Data"
+      },
+      {
+        "name": "Tableau",
+        "category": "Data Visualization & BI"
+      }
+    ],
+    "top_predicted_role": "Data Analyst",
+    "match_percentage": 55,
+    "readiness_score": 54,
+    "predictions": [
+      {
+        "role": "Data Analyst",
+        "confidence": 0.8247,
+        "match_percentage": 55,
+        "description": "Analyzes raw data, builds interactive dashboards, extracts business insights, and communicates findings to stakeholders.",
+        "matched_skills": [
+          "SQL",
+          "Tableau",
+          "Pandas"
+        ],
+        "missing_skills": [
+          "Python",
+          "Excel",
+          "Power BI",
+          "Statistics",
+          "Data Visualization",
+          "R"
+        ],
+        "all_missing_skills": [
+          "Python",
+          "Excel",
+          "Power BI",
+          "Statistics",
+          "Data Visualization",
+          "R",
+          "NumPy",
+          "Data Warehousing",
+          "ETL",
+          "A/B Testing",
+          "Snowflake",
+          "BigQuery"
+        ],
+        "market_demand": "Very High",
+        "avg_salary_range": "$70k - $105k",
+        "core_overlap_ratio": 0.375
+      },
+      {
+        "role": "Data Scientist",
+        "confidence": 0.0292,
+        "match_percentage": 15,
+        "description": "Leverages statistical modeling, experimental design, and predictive algorithms to solve complex business problems.",
+        "matched_skills": [
+          "SQL",
+          "Pandas"
+        ],
+        "missing_skills": [
+          "Python",
+          "R",
+          "Statistics",
+          "Machine Learning",
+          "Data Analysis",
+          "Scikit-learn"
+        ],
+        "all_missing_skills": [
+          "Python",
+          "R",
+          "Statistics",
+          "Machine Learning",
+          "Data Analysis",
+          "Scikit-learn",
+          "Data Visualization",
+          "Hypothesis Testing",
+          "Deep Learning",
+          "Spark",
+          "NLP",
+          "Feature Engineering",
+          "Storytelling"
+        ],
+        "market_demand": "High",
+        "avg_salary_range": "$110k - $160k",
+        "core_overlap_ratio": 0.2222222222222222
+      },
+      {
+        "role": "Backend Developer",
+        "confidence": 0.0258,
+        "match_percentage": 15,
+        "description": "Architects server-side logic, scalable APIs, database schemas, and microservices architecture.",
+        "matched_skills": [
+          "SQL"
+        ],
+        "missing_skills": [
+          "Python",
+          "FastAPI",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "REST APIs"
+        ],
+        "all_missing_skills": [
+          "Python",
+          "FastAPI",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "REST APIs",
+          "Docker",
+          "Git",
+          "MongoDB",
+          "Redis",
+          "Microservices",
+          "System Design",
+          "AWS",
+          "CI/CD",
+          "GraphQL",
+          "Linux"
+        ],
+        "market_demand": "High",
+        "avg_salary_range": "$85k - $140k",
+        "core_overlap_ratio": 0.1111111111111111
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "confidence": 0.0244,
+        "match_percentage": 15,
+        "description": "Designs, builds, trains, and deploys predictive machine learning models into production systems.",
+        "matched_skills": [
+          "Pandas",
+          "SQL"
+        ],
+        "missing_skills": [
+          "Python",
+          "Scikit-learn",
+          "Machine Learning",
+          "PyTorch",
+          "TensorFlow",
+          "NumPy"
+        ],
+        "all_missing_skills": [
+          "Python",
+          "Scikit-learn",
+          "Machine Learning",
+          "PyTorch",
+          "TensorFlow",
+          "NumPy",
+          "Docker",
+          "Git",
+          "MLOps",
+          "Deep Learning",
+          "FastAPI",
+          "Kubernetes",
+          "AWS",
+          "MLflow",
+          "Data Structures"
+        ],
+        "market_demand": "High Growth",
+        "avg_salary_range": "$115k - $175k",
+        "core_overlap_ratio": 0.1111111111111111
+      },
+      {
+        "role": "DevOps / Cloud Engineer",
+        "confidence": 0.0184,
+        "match_percentage": 15,
+        "description": "Automates cloud infrastructure, build/deploy pipelines, container orchestration, and system reliability.",
+        "matched_skills": [],
+        "missing_skills": [
+          "Docker",
+          "Kubernetes",
+          "Linux",
+          "AWS",
+          "CI/CD",
+          "Terraform"
+        ],
+        "all_missing_skills": [
+          "Docker",
+          "Kubernetes",
+          "Linux",
+          "AWS",
+          "CI/CD",
+          "Terraform",
+          "Git",
+          "Bash",
+          "Python",
+          "GitHub Actions",
+          "Azure",
+          "GCP",
+          "Prometheus",
+          "Grafana",
+          "Ansible",
+          "Helm",
+          "Security"
+        ],
+        "market_demand": "High Growth",
+        "avg_salary_range": "$105k - $165k",
+        "core_overlap_ratio": 0.0
+      }
+    ],
+    "missing_skills": [
+      "Python",
+      "Excel",
+      "Power BI",
+      "Statistics",
+      "Data Visualization",
+      "R"
+    ],
+    "recommended_skills": [
+      "Python",
+      "Excel",
+      "Power BI",
+      "Statistics",
+      "Data Visualization",
+      "R",
+      "NumPy",
+      "Data Warehousing"
+    ],
+    "career_summary": "Profile analyzed for 3 key technical skills. The candidate is strongly aligned with the 'Data Analyst' role with a 55% match score. Key immediate growth opportunities include mastering Python, Excel, Power BI.",
+    "created_at": "2026-10-07T08:59:49.345373"
+  }
+]
