@@ -14,13 +14,27 @@ from app.models.schemas import (
 
 class AIService:
     def __init__(self):
-        self.gemini_key = settings.GEMINI_API_KEY
-        self.openai_key = settings.OPENAI_API_KEY
+        pass
+
+    @property
+    def gemini_key(self) -> str:
+        return os.getenv("GEMINI_API_KEY", settings.GEMINI_API_KEY).strip()
+
+    @property
+    def openai_key(self) -> str:
+        return os.getenv("OPENAI_API_KEY", settings.OPENAI_API_KEY).strip()
 
     async def _call_gemini(self, prompt: str, system_instruction: str = "") -> Optional[str]:
-        if not self.gemini_key:
+        key = self.gemini_key
+        if not key:
             return None
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={self.gemini_key}"
+
+        models_to_try = [
+            "gemini-1.5-flash",
+            "gemini-2.0-flash",
+            "gemini-1.5-pro",
+        ]
+
         payload = {
             "contents": [
                 {
@@ -34,20 +48,27 @@ class AIService:
                 "maxOutputTokens": 2048,
             }
         }
-        try:
-            async with httpx.AsyncClient(timeout=25.0) as client:
-                res = await client.post(url, json=payload)
-                if res.status_code == 200:
-                    data = res.json()
-                    candidates = data.get("candidates", [])
-                    if candidates:
-                        parts = candidates[0].get("content", {}).get("parts", [])
-                        if parts:
-                            return parts[0].get("text", "")
-                else:
-                    print(f"[AIService] Gemini API error: {res.status_code} - {res.text}")
-        except Exception as e:
-            print(f"[AIService] Gemini API exception: {e}")
+
+        for model_name in models_to_try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
+            try:
+                async with httpx.AsyncClient(timeout=25.0) as client:
+                    res = await client.post(url, json=payload)
+                    if res.status_code == 200:
+                        data = res.json()
+                        candidates = data.get("candidates", [])
+                        if candidates:
+                            parts = candidates[0].get("content", {}).get("parts", [])
+                            if parts:
+                                return parts[0].get("text", "")
+                    elif res.status_code in (404, 400):
+                        # Try next model in sequence
+                        continue
+                    else:
+                        print(f"[AIService] Gemini API error ({model_name}): {res.status_code} - {res.text}")
+            except Exception as e:
+                print(f"[AIService] Gemini API exception ({model_name}): {e}")
+
         return None
 
     async def _call_openai(self, prompt: str, system_instruction: str = "") -> Optional[str]:
